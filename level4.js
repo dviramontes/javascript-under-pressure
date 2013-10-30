@@ -12,15 +12,20 @@ function longestString(i) {
     return (function() {
 
         var longest = "";
-        var next;
+        // var next;
 
         i.forEach(function(e, i) {
-            next = e;
-            if (next.length > longest.length) {
-                longest = next;
-            } else if (next.length < longest.length) {
-                return;
-            }
+            // next = e;
+            // if (next.length > longest.length) {
+            //     longest = next;
+            // } else if (next.length < longest.length) {
+            //     return;
+            // }
+
+            // or simply
+            // ...
+            if(e.length > longest.length) longest = e;
+
         });
 
 
