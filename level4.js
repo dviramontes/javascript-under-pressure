@@ -4,25 +4,30 @@ var tap = require('tap');
 
 console.log('level-4'.rainbow);
 
-var arr = ['a', 'abc', 'b'];
+var arr = ['a', 'abc', 'b', '2222'];
 
 
-function longestString(i){
+function longestString(i) {
 
-	return (function(){
-		
-		var longest;
-		var cache = 0;
+    return (function() {
 
-		i.forEach(function(e,i){
-			cache = e;
-			longest = cache.length > e.length ? cache : longest ;
-			longest = cache.length < e.length ? cache : longest ;
-		});
+        var longest = "";
+        var next;
 
-		console.log(longest);
-		return longest;
-	})();
+        i.forEach(function(e, i) {
+            next = e;
+            if (next.length > longest.length) {
+                longest = next;
+            } else if (next.length < longest.length) {
+                return;
+            }
+        });
+
+
+
+        console.log(longest);
+        return longest;
+    })();
 }
 
 longestString(arr);
