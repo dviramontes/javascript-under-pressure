@@ -1,13 +1,13 @@
-// var tab = require('tab');
 var colors = require('colors');
-var tap = require('tap');
 
 console.log('level-4'.rainbow);
 
 var arr = ['a', 'abc', 'b', '2222'];
 
-
 function longestString(i) {
+
+    // i will be an array.
+    // return the longest string in the array
 
     return (function() {
 
@@ -24,13 +24,9 @@ function longestString(i) {
 
             // or simply
             // ...
-            if(e.length > longest.length && typeof e === "string") longest = e;
+            if (e.length > longest.length && typeof e === "string") longest = e;
 
         });
-
-
-
-        console.log(longest);
         return longest;
     })();
 }
