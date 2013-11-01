@@ -12,9 +12,9 @@ function longestString(i) {
     return (function() {
 
         var longest = "";
-        // var next;
 
         i.forEach(function(e, i) {
+
             // next = e;
             // if (next.length > longest.length) {
             //     longest = next;
@@ -24,7 +24,7 @@ function longestString(i) {
 
             // or simply
             // ...
-            if(e.length > longest.length) longest = e;
+            if(e.length > longest.length && typeof e === "string") longest = e;
 
         });
 
